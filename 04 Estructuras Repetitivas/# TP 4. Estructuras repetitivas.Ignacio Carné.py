@@ -98,26 +98,29 @@ contador_pos = 0
 contador_neg = 0
 contador_total = 0 
 
-nro = int(input("Ingrese un número entero: "))
 
-while contador_total < 5:  # Condicion a cumplir. En este caso permite ingresar 5 números. Se puede cambiar ese número 5  por cualquier cantidad. 
-    # En realidad el usuario ingresa un número mas del que pide la condicion. Los que se analizan sí son los de la condición.
+
+while contador_total < 5:                             # Condicion a cumplir. En este caso permite ingresar 5 números. Se puede cambiar ese número 5  por cualquier cantidad. 
+                                                    # En realidad el usuario ingresa un número mas del que pide la condicion. Los que se analizan sí son los de la condición.
+    nro = int(input("Ingrese un número entero: "))
+    contador_total += 1
     if nro % 2 == 0:
         contador_par += 1 
         if nro > 0:
             contador_pos += 1       
         elif nro < 0:
+            
             contador_neg += 1
         
     elif nro % 2 != 0:
         contador_impar += 1
         if nro > 0:
-            contador_pos += 1       
+            contador_pos += 1 
+                  
         elif nro < 0:
             contador_neg += 1
-    
-    contador_total += 1
-    nro = int(input("Ingrese un número entero: "))
+
+
     
     
 print(f"La cantidad de números pares es: {contador_par}") 
@@ -125,6 +128,7 @@ print(f"La cantidad de números impares es: {contador_impar}")
 print(f"La cantidad de números positivos es: {contador_pos}")
 print(f"La cantidad de números negativos es: {contador_neg}") 
 print(f"Total de números ingresados: {contador_total}") 
+
 
 
 # Ejercicio 9 #
